@@ -1,6 +1,6 @@
 #!/bin/env bash
 
-# NumID - Number to and from ID Generator.
+# NumID - Number to and from ID Generator/Crypter.
 # Version: 0.1
 # Written by Metaspook
 # Copyright (c) 2020 Metaspook.
