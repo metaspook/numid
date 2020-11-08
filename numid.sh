@@ -1,7 +1,5 @@
-#!/bin/bash
+#!/bin/env bash
 
-##!/usr/bin/env bash
-##!/system/bin/env bash
 # NumID - Number to and from ID Generator.
 # Version: 0.1
 # Written by Metaspook
