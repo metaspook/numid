@@ -1,2 +1,2 @@
-# numid
-NumID - Number to and from ID Generator.
+# NumID
+Number to and from ID Generator.
