@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 # NumID - Number to and from ID Generator/Crypter.
-# Version: 0.2
+# Version: 0.3
 # Written by Metaspook
 # Copyright (c) 2020 Metaspook.
 
@@ -13,7 +13,7 @@ echo -e "ERROR: Requires Bash version 4+\n";exit 1;fi
 declare -A App=(
     [Name]="NumID"
     [FName]=$(case ${0##*/} in numid|numid.sh) echo "${0##*/}";; *) echo "numid";; esac)
-    [Ver]="0.2"
+    [Ver]="0.3"
     [CRDate]=$([[ $(date +'%Y' 2>/dev/null) -gt 2020 ]] && echo $(date +'%Y') || echo 2020)
 )
 declare -A RGX=(
@@ -98,9 +98,7 @@ function id_decrypt(){
 function chk(){
     # Error handler.**
     for X in $@; do local P K=${X/=*} V=${X#*=}; case $K in
-        -opt) if [[ ! "$V" =~ ${RGX[option]} || "$V" =~ ${RGX[repeat]} ]]; then
-            echo "ERROR: Invalid option! Use '-h' or '--help' for available options."
-            exit 1; fi;;
+        -opt) echo "ERROR: Invalid option! Use '-h' or '--help' for available options."; exit 1;;
         -rot) if [[ ${#V} -ne 1 || ! "$V" =~ ${RGX[digit]} ]]; then
             echo "ERROR: Rotation must in range of 0 to 9."
             exit 1; fi;;
@@ -146,11 +144,9 @@ Usage: ${App[FName]} <options..> <pattern> <number|id>
 #----< CALL CENTER >----#
 #
 # Cheack options.
-(($#>=1)) && chk -opt="$1"
 case $# in
 0) Main_Usage;;
-1) 
-    case $1 in
+1) case $1 in
         -h|--help) Main_Usage;;
         -*a*) CharSet[0]="${CharSet[0],,}";;&
         -a|-A) ptrn_gen "${CharSet[0]}";;
@@ -158,15 +154,13 @@ case $# in
         -AN|-NA|-aN|-Na) ptrn_gen alnum "${CharSet[0]}${CharSet[1]}";;
         *) chk -opt;;
     esac;;
-3|4) 
-    case $1 in
+3|4) case $1 in
         -e) NumId=num IdCrypt=id_encrypt;;
         -d) NumId=id IdCrypt=id_decrypt;;
         *) chk -opt;;
     esac;;&
 3) chk -ptrn="$2" -${NumId}="$3"; ${IdCrypt} $2 $3;;
-4) 
-    case $2 in
+4) case $2 in
         -R[0-9]) chk -rot="${2#-R}" -ptrn="$3" -${NumId}="$4"; ${IdCrypt} ${2#-R} $3 $4;;
         *) chk -opt;;
     esac;;
