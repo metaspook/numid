@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 # NumID - Number to and from ID Generator/Crypter.
-# Version: 0.2
+# Version: 0.3
 # Written by Metaspook
 # Copyright (c) 2020 Metaspook.
 
@@ -13,7 +13,7 @@ echo -e "ERROR: Requires Bash version 4+\n";exit 1;fi
 declare -A App=(
     [Name]="NumID"
     [FName]=$(case ${0##*/} in numid|numid.sh) echo "${0##*/}";; *) echo "numid";; esac)
-    [Ver]="0.2"
+    [Ver]="0.3"
     [CRDate]=$([[ $(date +'%Y' 2>/dev/null) -gt 2020 ]] && echo $(date +'%Y') || echo 2020)
 )
 declare -A RGX=(
