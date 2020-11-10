@@ -12,7 +12,7 @@ echo -e "ERROR: Requires Bash version 4+\n";exit 1;fi
 ### VARIABLES/ARRAY ###
 declare -A App=(
     [Name]=NumID
-    [FName]=$([[ "${0##*/}" == "numid[.sh]" ]] || echo numid)
+    [FName]=$([[ "numid.sh" == "numid[.sh]" ]] && echo numid.sh || echo numid)
     [Ver]=0.2
     [CRDate]=2020
 )
