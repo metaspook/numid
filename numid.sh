@@ -11,10 +11,10 @@ echo -e "ERROR: Requires Bash version 4+\n";exit 1;fi
 
 ### VARIABLES/ARRAY ###
 declare -A App=(
-    [Name]=NumID
-    [FName]=$([[ "numid.sh" == "numid[.sh]" ]] && echo numid.sh || echo numid)
-    [Ver]=0.2
-    [CRDate]=2020
+    [Name]="NumID"
+    [FName]=$(case ${0##*/} in numid|numid.sh) echo "${0##*/}";; *) echo "numid";; esac)
+    [Ver]="0.2"
+    [CRDate]=$([[ $(date +'%Y' 2>/dev/null) -gt 2020 ]] && echo $(date +'%Y') || echo 2020)
 )
 declare -A RGX=(
     [option]="^-[aAdehN]+$"
@@ -25,7 +25,6 @@ declare -A RGX=(
     [digit]="^[0-9]+$"
 )
 CharSet=("ABCDEFGHIJKLMNOPQRSTUVWXYZ" "0123456789")
-[[ $(date +'%Y' 2>/dev/null) -gt ${App[CRDate]} ]] && ${App[CRDate]}=$(date +'%Y')
 
 ### FUNCTIONS ###
 function ptrn_gen(){
