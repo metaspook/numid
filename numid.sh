@@ -1,4 +1,4 @@
-#!/bin/env bash
+#!/usr/bin/env bash
 
 # NumID - Number to and from ID Generator/Crypter.
 # Version: 0.1
