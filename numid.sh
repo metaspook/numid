@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 # NumID - Number to and from ID Generator/Crypter.
-# Version: 0.1
+# Version: 0.2
 # Written by Metaspook
 # Copyright (c) 2020 Metaspook.
 
@@ -13,7 +13,7 @@ echo -e "ERROR: Requires Bash version 4+\n";exit 1;fi
 declare -A App=(
     [Name]=NumID
     [FName]=${0##*/}
-    [Ver]=0.1
+    [Ver]=0.2
     [CRDate]=2020
 )
 declare -A RGX=(
@@ -129,16 +129,18 @@ Copyright © ${App[CRDate]} Metaspook.
 Usage: ${App[FName]} <options..> <pattern> <number|id>
    or: ${App[FName]} <options>
 
-<options>     <details>
-  -e          Encrypt Number to ID using pattern.
-     -R[0-9]  Specify manual rotation to encrypt.
-  -d          Decrypt ID to Number using pattern.
-     -R[0-9]  Specify manual rotation encrypted with.
-  -A|-a       Generate an unique alphabetic pattern, 
-              use 'a' for lowercase.
-  -N          Generate an unique numeric pattern.
-           ** For Alpha-numeric pattern mix '-A|-a' and 'N'.
-  -h, --help  Display this help and exit.
+<options>          <details>
+  -e               Encrypt Number to ID using pattern.
+     -R[0-9]       Specify manual rotation to encrypt.
+  -d               Decrypt ID to Number using pattern.
+     -R[0-9]       Specify manual rotation encrypted with.
+     
+  -A|-a            Generate an unique alphabetic pattern, 
+                   use '-a' for lowercase.
+  -N               Generate an unique numeric pattern.
+  -aN|-AN|-NA|-Na  Generate an unique alpha-numeric pattern.
+  
+  -h, --help       Display this help and exit.
 "
 }
 
