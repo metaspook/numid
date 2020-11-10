@@ -5,21 +5,25 @@ NumID's algorithm uses an pattern consist of 10 unique
 alpha-numeric characters and auto/manual rotation as the
 key to encrypt Number to ID and decrypt ID to Number.
 
+<b>Requires:</b> Bash version 4+
+
 ### Usage
 ```console
 Usage: numid <options..> <pattern> <number|id>
    or: numid <options>
 
-<options>     <details>
-  -e          Encrypt Number to ID using pattern.
-     -R[0-9]  Specify manual rotation to encrypt.
-  -d          Decrypt ID to Number using pattern.
-     -R[0-9]  Specify manual rotation encrypted with.
-  -A|-a       Generate an unique alphabetic pattern, 
-              use 'a' for lowercase.
-  -N          Generate an unique numeric pattern.
-           ** For Alpha-numeric pattern mix '-A|-a' and 'N'.
-  -h, --help  Display this help and exit.
+<options>          <details>
+  -e               Encrypt Number to ID using pattern.
+     -R[0-9]       Specify manual rotation to encrypt.
+  -d               Decrypt ID to Number using pattern.
+     -R[0-9]       Specify manual rotation encrypted with.
+     
+  -A|-a            Generate an unique alphabetic pattern, 
+                   use '-a' for lowercase.
+  -N               Generate an unique numeric pattern.
+  -aN|-AN|-NA|-Na  Generate an unique alpha-numeric pattern.
+  
+  -h, --help       Display this help and exit.
 ```
 
 ### Examples
