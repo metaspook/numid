@@ -24,6 +24,13 @@ Usage: numid <options..> <pattern> <number|id>
   -aN|-AN|-NA|-Na  Generate an unique alpha-numeric pattern.
   
   -h, --help       Display this help and exit.
+  
+  
+## Remote Usage
+curl -sL https://git.io/numid | bash -s - <options..> <pattern> <number|id>
+OR
+wget -qO- https://git.io/numid | bash -s - <options..> <pattern> <number|id>
+
 ```
 
 ### Examples
@@ -50,4 +57,5 @@ YPPB
 # decrypted to '0223' then rotate to '3556'.
 ~$ ./numid.sh -d -R7 B1PY9Q86IH 3556
 3556
+
 ```
