@@ -1,7 +1,7 @@
 # NumID
-Number to and from ID Generator/Crypter.
+Number to and from ID Generator/Crypter.<br>
 
-<b>Requires:</b> Bash version 4+
+> <b>Requires:</b> Bash version 4+
 
 ### 🎈 Features
 * Generate any product's unique order ID with cipher.
@@ -62,4 +62,10 @@ YPPB
 ~$ ./numid.sh -d -R7 B1PY9Q86IH 3556
 3556
 
+```
+
+### 🎈 Branches
+```
+👉 main   - Master development branch before release.<br>
+👉 stable - Master development branch before release.
 ```
