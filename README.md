@@ -1,13 +1,17 @@
 # NumID
 Number to and from ID Generator/Crypter.
 
-NumID's algorithm uses an pattern consist of 10 unique
-alpha-numeric characters and auto/manual rotation as the
-key to encrypt Number to ID and decrypt ID to Number.
-
 <b>Requires:</b> Bash version 4+
 
-### Usage
+### 🎈 Features
+* Generate any product's unique order ID with cipher.
+* Generate any Number to ID encrypted.
+* Uses 10 unique alpha-numeric character pattern as key.
+* Uses auto/manual rotation as extra key.
+* Built-in ID to Number decrypter.
+* Built-in unique alphabetic/numeric/alpha-numeric pattern generator.
+
+### 🎈 Usage
 ```console
 Usage: numid <options..> <pattern> <number|id>
    or: numid <options>
@@ -33,7 +37,7 @@ wget -qO- https://git.io/numid | bash -s - <options..> <pattern> <number|id>
 
 ```
 
-### Examples
+### 🎈 Examples
 ```shell
 # Let's generate a unique alpha-numeric Pattern.
 ~$ ./numid.sh -AN
