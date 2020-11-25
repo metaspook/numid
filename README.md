@@ -68,5 +68,5 @@ YPPB
 ### 🎈 Branches
 ```
 👉 main   - Master development branch before release.
-👉 stable - Stable branch for release and end-user.
+👉 stable - Stable branch for release and remote usage.
 ```
