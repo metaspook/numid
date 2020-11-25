@@ -1,7 +1,6 @@
 # NumID
-Number to and from ID Generator/Crypter.<br>
+NumID is a command-line Number to and from ID Generator/Crypter application.<br>
 
-><b>Type:</b> Command-line application<br>
 ><b>Requires:</b> Bash version 4+
 
 ### 🎈 Features
