@@ -32,14 +32,17 @@ Usage: numid <options..> <pattern> <number|id>
   
   
 ## Remote Usage
-curl -sL https://git.io/numid | bash -s - <options..> <pattern> <number|id>
+curl -sL https://git.io/numid.sh | bash -s - <options..> <pattern> <number|id>
 OR
-wget -qO- https://git.io/numid | bash -s - <options..> <pattern> <number|id>
+wget -qO- https://git.io/numid.sh | bash -s - <options..> <pattern> <number|id>
 
 ```
 
 ### 🎈 Examples
 ```shell
+# Make 'numid.sh' executable first (optional).
+~$ chmod +x ./numid.sh
+
 # Let's generate a unique alpha-numeric Pattern.
 ~$ ./numid.sh -AN
 B1PY9Q86IH
@@ -62,6 +65,10 @@ YPPB
 # decrypted to '0223' then rotate to '3556'.
 ~$ ./numid.sh -d -R7 B1PY9Q86IH 3556
 3556
+
+# Let's generate an encrypted ID from a Number Remotely*.
+~$ curl -sL https://git.io/numid.sh | bash -s - -e B1PY9Q86IH 3556
+H11P
 
 ```
 
