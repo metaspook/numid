@@ -9,7 +9,7 @@ Number to and from ID Generator/Crypter.
 * Uses 10 unique alpha-numeric character pattern as key.
 * Uses auto/manual rotation as extra key.
 * Built-in ID to Number decrypter.
-* Built-in unique alphabetic/numeric/alpha-numeric pattern generator.
+* Built-in unique alphabetic/numeric/alphanumeric pattern generator.
 
 ### 🎈 Usage
 ```console
