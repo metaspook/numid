@@ -10,6 +10,7 @@ NumID is a command-line Number to and from ID Generator/Crypter application.<br>
 * Uses auto/manual rotation as extra key.
 * Built-in ID to Number decrypter.
 * Built-in unique alphabetic/numeric/alphanumeric pattern generator.
+* Remotely executable by piping to Bash.
 
 ### 🎈 Usage
 ```console
