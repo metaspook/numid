@@ -75,6 +75,7 @@ H11P
 
 ### 🎈 Branches
 ```
-👉 main   - Master development branch before release.
-👉 stable - Stable branch for release and remote usage. [default]
+👉 develop - Primary development branch.
+👉 main    - Master development branch before release.
+👉 stable  - Stable branch for release and remote usage.
 ```
