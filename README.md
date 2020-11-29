@@ -73,6 +73,14 @@ H11P
 
 ```
 
+### 🎈 Change Log:
+<details><summary>Click to collapse/fold.</summary><br/> 
+
+```
+* v1.0 - Initial release.
+```
+</details>
+
 ### 🎈 Branches
 ```
 👉 develop - Primary development branch.
