@@ -18,7 +18,7 @@ declare -A App=(
 )
 declare -A RGX=(
     [repeat]="(.).*\1"
-    [alnum10]="^[A-Za-z0-9]{10}+$"
+    [alnum10]="^[A-Za-z0-9]{10}$"
     [alnum]="^[A-Za-z0-9]+$"
     [alpha]="^[A-Za-z]+$"
     [digit]="^[0-9]+$"
